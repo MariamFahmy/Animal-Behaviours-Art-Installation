@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { VectorUtil } from '../../Util/VectorUtil.js';
 import { Character } from './Character.js';
 
-export class NPC extends Character {
+export class BabyDuck extends Character {
 
 	// Character Constructor
 	constructor(mColor) {

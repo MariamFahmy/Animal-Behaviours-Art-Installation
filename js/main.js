@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GameMap } from './Game/World/GameMap.js';
 import { Character } from './Game/Behaviour/Character.js';
-import { NPC } from './Game/Behaviour/BabyDuck.js';
+import { BabyDuck } from './Game/Behaviour/BabyDuck.js';
 import { Player } from './Game/Behaviour/Player.js';
 import { Controller} from './Game/Behaviour/Controller.js';
 import { Resources } from '../js/Util/Resources.js'
@@ -15,20 +15,11 @@ const CAMERA = new THREE.PerspectiveCamera(100, window.innerWidth/window.innerHe
 const RENDERER = new THREE.WebGLRenderer();
 
 const ORBIT_CONTROLS = new OrbitControls(CAMERA, RENDERER.domElement);
-
-// Create clock
 const CLOCK = new THREE.Clock();
+const CONTROLLER = new Controller(document); // controller to allow user to use arrow keys to move
 
-// Controller for player
-const CONTROLLER = new Controller(document);
-
-// GameMap
 let gameMap;
-
-// Player
 let user;
-
-// NPC
 let babyDuck;
 
 // Load resources
@@ -65,7 +56,7 @@ function setup() {
 	SCENE.add(gameMap.gameObject);
 	
 	// Create baby duck and mother duck (user)
-	babyDuck = new NPC(new THREE.Color(0x000000), SCENE);
+	babyDuck = new BabyDuck(new THREE.Color(0x000000), SCENE);
 	user = new Player(new THREE.Color(0xff0000), SCENE);
 
 	babyDuck.setModel(resources.get("baby duck"));
