@@ -1,5 +1,6 @@
+# https://animal-behaviours.vercel.app/
+
 # Animal Behaviours Three.js Interactive Art Installation
-**Demo video**: https://www.youtube.com/watch?v=jDNxV8kc_J0
 
 An interactive art installation that makes use of algorithms such as: 
 - flow-field pathfinding
