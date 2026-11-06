@@ -144,8 +144,6 @@ export class Character {
 
 	// Separate steering behaviour
 	separate(characters) {
-		// You will want to tune neighbourDistance
-		//  to work for your application
 		let desiredSeparation = 6;
 		let vectorSum = new THREE.Vector3();
 		let count = 0;
