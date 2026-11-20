@@ -12,6 +12,7 @@ This project is an interactive art installation showing animal behavior such as:
 - birds flocking and flying
 - a predator chasing and eating a prey
 - a baby duck following its mother
+  
 All these behaviors are inspired by real life.
 ## How to Run
 Install three.js and vite, then run the command “npx vite” as shown here: https://threejs.org/docs/#manual/en/introduction/Installation
